@@ -11,20 +11,29 @@
           margin-left: -12px; 
           margin-right: -12px; 
       }
+      /* Navbar daki kenarların, Container padding'ini sıfırlamak için */      
+      .card-alt {          
+          margin-left: -12px; 
+          margin-right: -12px; 
+      }
       /*Slayt içindeki resmin boyutunu cihazlara göre yüksekliğin küçülmesi*/
       @media (max-width: 768px) {
             .kutu {                
                 height: 275px !important;
             }
-        }
+      }
+        .btn-group {
+          display: flex;
+          justify-content: center;
+      }
   </style>
   </head>
 <body class="container-md shadow rounded-3" >
 <!--Navbar Bölümü-->
-<nav class="navbar rounded-2 shadow-lg navbar-expand-lg fixed-top sticky-top fw-bold" style="background-color: #e7a922 " >
+<nav class="navbar rounded-2 shadow-lg navbar-expand-lg fixed-top sticky-top fw-bold" style="background-color: #e7a922" >
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
-        <img src="img/logo.png" alt="Bootstrap" width="30" height="30" class="d-inline-block align-text-top">
+        <img src="img/logo.png" alt="Bootstrap" width="30" height="30" class="d-inline-block align-text-top"> 
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -53,8 +62,8 @@
         </li>
       </ul>
       <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <input class="form-control me-2" type="search" placeholder="Eğitim Ara" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Ara</button>
       </form>
     </div>
   </div>
@@ -66,20 +75,26 @@
   <div class="row">
   <div class="col-md-3 d-block">
       <!--Menü Alanı Sol Taraf-->  
-      <div class="card-md">
-        <img src="img/akademilogo.png" class="card-img-top" alt="...">
+      <div class="card-md"><br>
+        <center><img src="img/akademilogo.png" class="card-img-top" style="width: 200px; height: 200px;" alt="..."></center>
         <div class="card-body">
           <h5 class="card-title text-center">Öğretmen Akademileri</h5>
           <p class="card-text text-center">Öğretmen Akademi Eğitimleri Başvuru ve Bilgilendirme Sayfası</p>
         </div>
         <hr>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item"><a href="#" class="card-link">Link Eğitimler</a></li>
-          <li class="list-group-item"><a href="#" class="card-link">Link Eğitimler</a></li>
-          <li class="list-group-item"><a href="#" class="card-link">Link Eğitimler</a></li>
-          <li class="list-group-item"><a href="#" class="card-link">Link Eğitimler</a></li>
-        </ul> 
+          <li class="list-group-item"><img border="0" src="img/logo.png" width="20" height="20"> <a href="#" class="link-offset-2 link-offset-2-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Eğitimler</a></li>
+          <li class="list-group-item"><img border="0" src="img/logo.png" width="20" height="20"> <a href="#" class="link-offset-2 link-offset-2-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Hakkında</a></li>
+          <li class="list-group-item"><img border="0" src="img/logo.png" width="20" height="20"> <a href="#" class="link-offset-2 link-offset-2-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Hesap Oluştur</a></li>
+          <li class="list-group-item"><img border="0" src="img/logo.png" width="20" height="20"> <a href="#" class="link-offset-2 link-offset-2-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Duyurular</a></li>
+          
+        </ul>
+
         <hr>
+        <div class="btn-group justify-content-center">
+          <button type="button" class="btn btn-outline-primary ">Hesap Oluştur</button>
+          <button type="button" class="btn btn-outline-success">Kullanıcı Girişi</button>          
+        </div> 
       </div>
     <!-- Menü alanı Son-->
   </div>
@@ -102,8 +117,8 @@
                   
                   <img src="img/logo.png" class="kutu w-100" style="height: 530px;" alt="">
                   <div class="carousel-caption d-none d-md-block">
-                    <h5>First slide label</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
+                    <h5 class="text-bg-secondary" style="text-align:left;">First slide label</h5>
+                    <p class="text-bg-secondary" style="text-align:left;">Some representative placeholder content for the first slide.</p>
                   </div>
                 </div>
                 <div class="carousel-item" data-bs-interval="2000">
@@ -121,11 +136,11 @@
                   </div>
                 </div>
               </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
               </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
               </button>
@@ -144,13 +159,13 @@
                   <img src="img/slayt.png" class="bd-placeholder-img card-img-top" style="height: 230px;" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p><br>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Detay</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Başvuru</button>
                       </div>
-                      <small class="text-body-secondary">9 mins</small>
+                      <small class="text-body-secondary">10/10/2024</small>
                     </div>
                   </div>
                 </div>
@@ -160,13 +175,13 @@
                   <img src="img/akademilogo.png" class="bd-placeholder-img card-img-top" style="height: 230px;" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p><br>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Detay</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Başvuru</button>
                       </div>
-                      <small class="text-body-secondary">9 mins</small>
+                      <small class="text-body-secondary">10/10/2024</small>
                     </div>
                   </div>
                 </div>
@@ -176,13 +191,13 @@
                   <img src="img/logo.png" class="bd-placeholder-img card-img-top" style="height: 230px;" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p><br>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Detay</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Başvuru</button>
                       </div>
-                      <small class="text-body-secondary">9 mins</small>
+                      <small class="text-body-secondary">10/10/2024</small>
                     </div>
                   </div>
                 </div>
@@ -192,13 +207,13 @@
                   <img src="img/slayt.png" class="bd-placeholder-img card-img-top" style="height: 230px;" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p><br>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Detay</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Başvuru</button>
                       </div>
-                      <small class="text-body-secondary">9 mins</small>
+                      <small class="text-body-secondary">10/10/2024</small>
                     </div>
                   </div>
                 </div>
@@ -218,15 +233,15 @@
 <br>
 <!--Alt Bilgi Alanı-->    
 <div class="card-footer text-body-secondary">
-  <div class="card">
-    <div class="card-header bg-warning-subtle text-center">Header</div>
-    <div class="text-center">
+  <div class="card-alt" >
+    <div class="card-header bg-dark-subtle text-center">Header</div>
+    <div class="text-center" style="background-color: #e7a922" >
       <h5 class="card-title">Warning card title</h5>
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     </div>
   </div>
 </div>
-<hr style="visibility: hidden;">
+
 <!--Alt Bilgi Alanı Son-->
     <script src="dist/js/bootstrap.bundle.min.js"></script>
     <script src="dist/umd/popper.min.js"></script>
