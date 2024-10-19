@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Akademi</title>
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>  
+      /* Navbar daki kenarların, Container padding'ini sıfırlamak için */      
+      .navbar {          
+          margin-left: -12px; 
+          margin-right: -12px; 
+      }
+      /* Navbar daki kenarların, Container padding'ini sıfırlamak için */      
+      .card-alt {          
+          margin-left: -12px; 
+          margin-right: -12px; 
+      }
+      /*Slayt içindeki resmin boyutunu cihazlara göre yüksekliğin küçülmesi*/
+      @media (max-width: 768px) {
+            .kutu {                
+                height: 275px !important;
+            }
+      }
+        .btn-group {
+          display: flex;
+          justify-content: center;
+      }
+     
+  </style>
+  </head>
+<body class="container-md shadow rounded-3" >
+<!--Navbar Bölümü-->
+<nav class="navbar rounded-2 shadow-lg navbar-expand-lg fixed-top sticky-top fw-bold" style="background-color: #e7a922" >
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+        <img src="img/logo.png" alt="Bootstrap" width="30" height="30" class="d-inline-block align-text-top"> 
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-1 mb-lg-0">
+        <li class="nav-item ">
+          <a class="nav-link" aria-current="page" href="#">Ana Sayfa</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Açılı Menü</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <!--Profil Menüsü-->
+
+      <div class="dropdown-center">
+        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="img/profil.png" style="width: 20px; height: 20px;" alt="..."> Kullanıcı
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Giriş İşlemi</a></li>
+          <li><a class="dropdown-item" href="#">Kayıt İşlemi</a></li>          
+        </ul>
+      </div>
+
+      <!--Profil Menüsü SON-->
+    </div>
+  </div>
+</nav>
+<!--Navbar Bölümü SON-->
+
+<!--Tüm Sayfa Grid-->
+<div class="container">
+  <div class="row">
+  <div class="col-md-3 d-block">
+      <!--Menü Alanı Sol Taraf-->  
+      <div class="card-md"><br>
+        <center><img src="img/akademilogo.png" class="card-img-top" style="width: 200px; height: 200px;" alt="..."></center>
+        <div class="card-body">
+          <h5 class="card-title text-center">Öğretmen Akademileri</h5>
+          <p class="card-text text-center">Öğretmen Akademi Eğitimleri Başvuru ve Bilgilendirme Sayfası</p>
+        </div>
+        <hr>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><img border="0" src="img/logo.png" width="20" height="20"> <a href="#" class="link-offset-2 link-offset-2-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Eğitimler</a></li>
+          <li class="list-group-item"><img border="0" src="img/logo.png" width="20" height="20"> <a href="#" class="link-offset-2 link-offset-2-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Hakkında</a></li>
+          <li class="list-group-item"><img border="0" src="img/logo.png" width="20" height="20"> <a href="#" class="link-offset-2 link-offset-2-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Hesap Oluştur</a></li>
+          <li class="list-group-item"><img border="0" src="img/logo.png" width="20" height="20"> <a href="#" class="link-offset-2 link-offset-2-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Duyurular</a></li>
+          
+        </ul>
+        <hr>
+      </div>
+    <!-- Menü alanı Son-->
+  </div>
+
+  <div class="col-md">
+<!--Ana Kısım-->      
+
+<div class="lightbox" data-mdb-lightbox-init>
+  <div class="row">
+    <div class="col-lg-6">
+      <img
+        src="https://mdbcdn.b-cdn.net/img/Photos/Thumbnails/Slides/1.webp"
+        data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Slides/1.webp"
+        alt="Table Full of Spices"
+        class="w-100 mb-2 mb-md-4 shadow-1-strong rounded"
+      />
+      <img
+        src="https://mdbcdn.b-cdn.net/img/Photos/Thumbnails/Square/1.webp"
+        data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Square/1.webp"
+        alt="Coconut with Strawberries"
+        class="w-100 shadow-1-strong rounded"
+      />
+    </div>
+    <div class="col-lg-6">
+      <img
+        src="https://mdbcdn.b-cdn.net/img/Photos/Thumbnails/Vertical/1.webp"
+        data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Vertical/1.webp"
+        alt="Dark Roast Iced Coffee"
+        class="w-100 shadow-1-strong rounded"
+      />
+    </div>
+  </div>
+</div>
+
+<!--Ana Kısım SON-->            
+      </div>
+      </div>
+  </div>
+  </div>
+</div>    
+<!--Tüm Sayfa Grid SON-->
+<br>
+<!--Alt Bilgi Alanı-->    
+<div class="card-footer text-body-secondary">
+  <div class="card-alt" >
+    <div class="card-header bg-dark-subtle text-center">Header</div>
+    <div class="text-center" style="background-color: #e7a922" >
+      <h5 class="card-title">Warning card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+</div>
+
+<!--Alt Bilgi Alanı Son-->
+
+    <script src="dist/js/bootstrap.bundle.min.js"></script>
+    <script src="dist/umd/popper.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <script src="dist/js/jquery-3.5.1.slim.min.js"></script>
+
+</body>
+</html>
