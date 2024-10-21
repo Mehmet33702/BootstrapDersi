@@ -28,7 +28,7 @@
       @media (max-width: 768px) {
             .kutu {                
                 height: 275px !important;
-            }
+             }
       }     
   </style>
   </head>
@@ -111,19 +111,22 @@
 
 <!-- Button trigger modal -->
 
-  <img src="img/img1.webp" class="img-thumbnail" style="width: 20%;" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  <img src="img/logo.webp" class="img-thumbnail" style="width: 20%;" data-bs-toggle="modal" data-bs-target="#exampleModal"> 
+  <img src="img/img1.webp" class="img-thumbnail" style="max-width: 40%; max-height: 18%;" data-bs-toggle="modal" data-bs-target="#imageModal" data-src="img/img1.webp">
+  <img src="img/logo.png" class="img-thumbnail" style="max-width: 40%; max-height: 18%;" data-bs-toggle="modal" data-bs-target="#imageModal" data-src="img/logo.png"> 
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-xl">
     <div class="modal-content">
       <div class="modal-header">        
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
-        <img src="img/img1.webp" style="width: 100%;" alt="">
-      </div>
+      <div class="modal-body bg-dark-subtle">
+        <center>
+        <img id="modalImage" src="" style="width: 80%; height: 50%;" class="img-fluid" alt="">
+        </center>
+    </div>
+
      </div>
   </div>
 </div>
@@ -155,7 +158,14 @@
     <script src="dist/umd/popper.min.js"></script>
     <script src="dist/js/bootstrap.min.js"></script>
     <script src="dist/js/jquery-3.5.1.slim.min.js"></script>
-
+    <script>
+      $('#imageModal').on('show.bs.modal', function (event) {
+          var button = $(event.relatedTarget);
+          var src = button.data('src');
+          var modal = $(this);
+          modal.find('#modalImage').attr('src', src);
+      });
+  </script>
     
 </body>
 </html>
