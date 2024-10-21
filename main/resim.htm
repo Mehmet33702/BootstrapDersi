@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Image Gallery</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .modal-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .modal-content img {
+            max-width: 250%;
+            max-height: 250%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-3">
+            <img src="img/img1.webp" class="img-thumbnail fa-text-height " data-toggle="modal" data-target="#imageModal" data-src="img/img1.webp">
+        </div>
+        <div class="col-md-3">
+            <img src="img/akademilogo.png" class="img-thumbnail" data-toggle="modal" data-target="#imageModal" data-src="img/akademilogo.png">
+        </div>
+        <div class="col-md-3">
+            <img src="img/logo.png" class="img-thumbnail" data-toggle="modal" data-target="#imageModal" data-src="img/logo.png">
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content ">
+            <img id="modalImage" src="" class="img-fluid shadow-lg">
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    $('#imageModal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget);
+        var src = button.data('src');
+        var modal = $(this);
+        modal.find('#modalImage').attr('src', src);
+    });
+</script>
+
+</body>
+</html>
