@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Sidebar Menu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="d-flex">
+        <div class="bg-light border" id="sidebar">
+            <div class="list-group list-group-flush">
+                <a href="#" class="list-group-item list-group-item-action">Home</a>
+                <a href="#" class="list-group-item list-group-item-action" data-bs-toggle="collapse" data-bs-target="#submenu1">Menu 1</a>
+                <div class="collapse" id="submenu1">
+                    <a href="#" class="list-group-item list-group-item-action">Submenu 1.1</a>
+                    <a href="#" class="list-group-item list-group-item-action">Submenu 1.2</a>
+                </div>
+                <a href="#" class="list-group-item list-group-item-action">About</a>
+                <a href="#" class="list-group-item list-group-item-action">Contact</a>
+            </div>
+        </div>
+        <div class="flex-grow-1 p-3">
+            <h1>Content Area</h1>
+            <p>This is the main content area.</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
